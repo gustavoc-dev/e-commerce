@@ -1,0 +1,73 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+
+@mixin cards($color,$height,$width)
+    background-color:$color
+    height:$height
+    width:$width
+
+
+header
+    padding: 1rem
+
+nav
+    display: flex
+    gap: 3rem
+
+.first-half
+    width: 55vw
+    display: flex
+    justify-content: space-between
+
+.search-bar
+    display: flex
+    gap: 1rem
+
+.second-half
+    width: 35vw
+    display: flex
+    justify-content: space-between
+    
+
+.menu-section
+    margin-top: 2rem
+    
+.menu
+    display: flex
+    flex-direction: row
+    list-style-type: none
+    justify-content: center
+    gap: 3rem
+
+.cards
+    display: grid
+
+
+
+
+
+.first-card
+    @include cards(blue,25rem,45rem)
+    grid-column: 3/4
+    grid-row: 1/4
+
+
+.second-card
+    @include cards(red,15rem,30rem)
+    grid-column: 4/4
+
+.third-card
+    @include cards(yellow,12rem,15rem)
+    grid-column: 4/5
+    grid-row: 2/4
+
+    
+
+.fourth-card
+    @include cards(purple,12rem,15rem)
+    grid-column: 5/5
+    grid-row: 2/4
+    

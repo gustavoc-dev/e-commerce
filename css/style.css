@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  gap: 3rem;
+}
+
+.first-half {
+  width: 55vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-bar {
+  display: flex;
+  gap: 1rem;
+}
+
+.second-half {
+  width: 35vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-section {
+  margin-top: 2rem;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.cards {
+  display: grid;
+}
+
+.first-card {
+  background-color: blue;
+  height: 25rem;
+  width: 45rem;
+  grid-column: 3/4;
+  grid-row: 1/4;
+}
+
+.second-card {
+  background-color: red;
+  height: 15rem;
+  width: 30rem;
+  grid-column: 4/4;
+}
+
+.third-card {
+  background-color: yellow;
+  height: 12rem;
+  width: 15rem;
+  grid-column: 4/5;
+  grid-row: 2/4;
+}
+
+.fourth-card {
+  background-color: purple;
+  height: 12rem;
+  width: 15rem;
+  grid-column: 5/5;
+  grid-row: 2/4;
+}
+
+/*# sourceMappingURL=style.css.map */
