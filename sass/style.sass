@@ -76,11 +76,74 @@ nav
 
 
 .first-card
-    @include cards(blue,35rem,60vw)
+    @include cards(black,35rem,60vw)
     grid-column: 3/4
     grid-row: 1/4
+    overflow: hidden
+    
+.slides
+    display: flex
+
+.slides input
+    display: none
+
+.slide
+    position: relative
+
+.manual-navigation
+    position: absolute
+    display: flex
+    margin-top: -3rem
     
 
+.manual-btn
+    border: 2px solid white
+    padding: 5px
+    border-radius: 10px
+    cursor: pointer
+    transition: 0.5s
+
+
+.manual-btn:not(:last-child)
+    margin-right: 40px
+
+.manual-btn:hover
+    background-color: white
+
+
+#radio1:checked ~ .first
+    margin-left: 0
+
+
+#radio2:checked ~ .first
+    margin-left: -100%
+
+#radio3:checked ~ .first
+    margin-left: -200%
+
+.navigation-auto
+    position: absolute
+    display: flex
+    margin-top: 32.22rem
+
+.navigation-auto div
+    border: 2px solid white
+    border-radius: 10px
+    padding: 5px
+    cursor: pointer
+    transition: 0.5s
+
+.navigation-auto div:not(:last-child)
+    margin-right: 40px
+
+#radio1:checked ~ .navigation-auto .auto-btn1
+    background-color: white
+
+#radio2:checked ~ .navigation-auto .auto-btn2
+    background-color: white
+
+#radio3:checked ~ .navigation-auto .auto-btn3
+    background-color: white
 
 .second-card
     @include cards(red,18rem,30vw)
@@ -104,8 +167,38 @@ nav
     @include cards(purple,16.5rem,19rem)
 
 .arrives
+    overflow-x: auto
 
-    
+.arrives::-webkit-scrollbar 
+  display: none
+
+.arrow-left,.arrow-right
+    position: absolute
+    top: 0
+    left: 0
+    right: auto
+    margin-top: 52.6rem
+    font-size: 40px
+    line-height: 250px
+    width: 40px
+    height: 30rem
+    color: #fff
+    transition: all 600ms ease-in-out
+    background: linear-gradient(to left, transparent 0%, black 200%)
+    opacity: 0.1
+    cursor: pointer
+    border: none
+
+.arrow-left:hover,.arrow-right:hover 
+  opacity: 1
+
+
+.arrow-right 
+  right: 0
+  left: auto
+  text-align: right
+  background: linear-gradient(to right, transparent 0%, black 200%)
+
 
 .arrives-title
     @include space-between(0,2rem)
@@ -118,6 +211,8 @@ nav
     display: flex
     justify-content: center
     gap: 2rem
+    width: 160vw
+
 
 .section-itens
     display: flex
@@ -127,6 +222,9 @@ nav
 .arrives-img
     @include cards(yellow ,30rem,30rem)
     border-radius: 10px
+    flex-shrink: 0
+    transition: all 600ms ease-in-out
+
     
 .banner
     @include space-between(4rem,2rem)

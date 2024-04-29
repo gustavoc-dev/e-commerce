@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Commerce</title>
     <link rel="stylesheet" href="./css/style.css">
-    <script src="index.js"></script>
 </head>
 <body>
     <header>
@@ -42,64 +41,97 @@
             <img src="" alt="">
             <img src="" alt="">
             <img src="" alt=""> -->
-            <div class="first-card"></div>
+            <div class="first-card">
+                <div class="slides">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <div class="first">
+                        <img class="first-card" src="./img/WhatsApp Image 2024-04-13 at 17.53.38 (3).jpeg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img class="first-card" src="./img/WhatsApp Image 2024-04-13 at 17.53.39 (1).jpeg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img class="first-card" src="./img/WhatsApp Image 2024-04-13 at 17.53.39.jpeg" alt="">
+                    </div>
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                    </div>
+                </div>
+                <div class="manual-navigation">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                </div>
+            </div>
             <div class="second-card"></div>
             <div class="third-card">
                 <div class="third-card-a"></div>
                 <div class="third-card-b"></div>
             </div>
         </div>
+        <section class="arrives-title">
+            <h2>Lançamentos</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eligendi quam laudantium illo et</p>
+        </section>
         <div class="arrives">
-            <section class="arrives-title">
-                <h2>Lançamentos</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eligendi quam laudantium illo et</p>
-            </section>
             <div class="arrives-itens">
+                <button class="arrow-left control" aria-label="Previous image">◀</button>
+                <button class="arrow-right control" aria-label="Next Image">▶</button>
                 <section>
-                    <div class="arrives-img"></div>
-                    <section class="section-itens">
+                    <div class="item current-item"></div>
+                        <div class="arrives-img"></div>
                         <span>
                             <p>Lorem</p>
                             <p><strong>R$00</strong></p>
                         </span>
                         <button><img src="" alt="carrinho"></button>
-                    </section>
                 </section>
                 <section>
-                    <div class="arrives-img"></div>
-                    <section class="section-itens">
+                    <div class="item current-item"></div>
+                        <div class="arrives-img"></div>
                         <span>
                             <p>Lorem</p>
                             <p><strong>R$00</strong></p>
                         </span>
                         <button><img src="" alt="carrinho"></button>
-                    </section>
                 </section>
                 <section>
-                    <div class="arrives-img"></div>
-                    <section class="section-itens">
+                    <div class="item current-item"></div>
+                        <div class="arrives-img"></div>
                         <span>
                             <p>Lorem</p>
                             <p><strong>R$00</strong></p>
                         </span>
                         <button><img src="" alt="carrinho"></button>
-                    </section>
-                </section>
-                <!-- <section>
-                    <div class="arrives-img"></div>
-                    <p>Lorem</p>
-                    <p><strong>R$00</strong></p>
                 </section>
                 <section>
+                    <div class="item current-item"></div>
                     <div class="arrives-img"></div>
-                    <p>Lorem</p>
-                    <p><strong>R$00</strong></p>
+                    <span>
+                        <p>Lorem</p>
+                        <p><strong>R$00</strong></p>
+                    </span>
                 </section>
                 <section>
+                    <div class="item current-item"></div>
                     <div class="arrives-img"></div>
-                    <p>Lorem</p>
-                    <p><strong>R$00</strong></p>
-                </section> -->
+                    <span>
+                        <p>Lorem</p>
+                        <p><strong>R$00</strong></p>
+                    </span>
+                </section>
+                <section>
+                    <div class="item current-item"></div>
+                    <div class="arrives-img"></div>
+                    <span>
+                        <p>Lorem</p>
+                        <p><strong>R$00</strong></p>
+                    </span>
+                </section>
             </div>
         </div>
         <div class="banner">
@@ -136,4 +168,5 @@
     </main>
     <footer class="footer"></footer>
 </body>
+    <script src="index.js"></script>
 </html>
