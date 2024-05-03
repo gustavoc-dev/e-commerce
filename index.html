@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Commerce</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -37,15 +38,11 @@
     </section>
     <main>
         <div class="cards">
-            <!-- <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt=""> -->
             <div class="first-card">
                 <div class="slides">
-                    <input type="radio" name="radio-btn" id="radio1">
-                    <input type="radio" name="radio-btn" id="radio2">
-                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio1-card">
+                    <input type="radio" name="radio-btn" id="radio2-card">
+                    <input type="radio" name="radio-btn" id="radio3-card">
                     <div class="first">
                         <img class="first-card" src="./img/WhatsApp Image 2024-04-13 at 17.53.38 (3).jpeg" alt="">
                     </div>
@@ -62,9 +59,9 @@
                     </div>
                 </div>
                 <div class="manual-navigation">
-                    <label for="radio1" class="manual-btn"></label>
-                    <label for="radio2" class="manual-btn"></label>
-                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio1-card" class="manual-btn"></label>
+                    <label for="radio2-card" class="manual-btn"></label>
+                    <label for="radio3-card" class="manual-btn"></label>
                 </div>
             </div>
             <div class="second-card"></div>
@@ -78,12 +75,11 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eligendi quam laudantium illo et</p>
         </section>
         <div class="arrives">
+            <i id="left" class="fa-solid fa-angle-left"></i>
             <div class="arrives-itens">
-                <button class="arrow-left control" aria-label="Previous image">◀</button>
-                <button class="arrow-right control" aria-label="Next Image">▶</button>
                 <section>
                     <div class="item current-item"></div>
-                        <div class="arrives-img"></div>
+                        <img class="arrives-img" src="./img/WhatsApp Image 2024-04-13 at 17.53.39.jpeg"></img>
                         <span>
                             <p>Lorem</p>
                             <p><strong>R$00</strong></p>
@@ -91,8 +87,7 @@
                         <button><img src="" alt="carrinho"></button>
                 </section>
                 <section>
-                    <div class="item current-item"></div>
-                        <div class="arrives-img"></div>
+                    <img class="arrives-img" src="./img/WhatsApp Image 2024-04-13 at 17.53.38 (3).jpeg"></img>
                         <span>
                             <p>Lorem</p>
                             <p><strong>R$00</strong></p>
@@ -100,8 +95,7 @@
                         <button><img src="" alt="carrinho"></button>
                 </section>
                 <section>
-                    <div class="item current-item"></div>
-                        <div class="arrives-img"></div>
+                    <img class="arrives-img" src="./img/WhatsApp Image 2024-04-13 at 17.53.38 (3).jpeg"></img>
                         <span>
                             <p>Lorem</p>
                             <p><strong>R$00</strong></p>
@@ -109,33 +103,81 @@
                         <button><img src="" alt="carrinho"></button>
                 </section>
                 <section>
-                    <div class="item current-item"></div>
-                    <div class="arrives-img"></div>
+                    <img class="arrives-img" src="./img/WhatsApp Image 2024-04-13 at 17.53.38 (3).jpeg"></img>
                     <span>
                         <p>Lorem</p>
                         <p><strong>R$00</strong></p>
                     </span>
                 </section>
                 <section>
-                    <div class="item current-item"></div>
-                    <div class="arrives-img"></div>
+                    <img class="arrives-img" src="./img/WhatsApp Image 2024-04-13 at 17.53.38 (3).jpeg"></img>
                     <span>
                         <p>Lorem</p>
                         <p><strong>R$00</strong></p>
                     </span>
                 </section>
                 <section>
-                    <div class="item current-item"></div>
-                    <div class="arrives-img"></div>
+                    <img class="arrives-img" src="./img/WhatsApp Image 2024-04-13 at 17.53.38 (3).jpeg"></img>
+                    <span>
+                        <p>Lorem</p>
+                        <p><strong>R$00</strong></p>
+                    </span>
+                </section>
+                <section>
+                    <img class="arrives-img" src="./img/WhatsApp Image 2024-04-13 at 17.53.38 (3).jpeg"></img>
+                    <span>
+                        <p>Lorem</p>
+                        <p><strong>R$00</strong></p>
+                    </span>
+                </section>
+                <section>
+                    <img class="arrives-img" src="./img/WhatsApp Image 2024-04-13 at 17.53.38 (3).jpeg"></img>
+                    <span>
+                        <p>Lorem</p>
+                        <p><strong>R$00</strong></p>
+                    </span>
+                </section>
+                <section>
+                    <img class="arrives-img" src="./img/WhatsApp Image 2024-04-13 at 17.53.38 (3).jpeg"></img>
+                    <span>
+                        <p>Lorem</p>
+                        <p><strong>R$00</strong></p>
+                    </span>
+                </section>
+                <section>
+                    <img class="arrives-img" src="./img/WhatsApp Image 2024-04-13 at 17.53.38 (3).jpeg"></img>
                     <span>
                         <p>Lorem</p>
                         <p><strong>R$00</strong></p>
                     </span>
                 </section>
             </div>
+            <i id="right" class="fa-solid fa-angle-right"></i>
         </div>
         <div class="banner">
-            <div class="banner-img">
+            <input type="radio" name="radio-btn" id="radio1-banner">
+            <input type="radio" name="radio-btn" id="radio2-banner">
+            <input type="radio" name="radio-btn" id="radio3-banner"></input>
+            
+            <div class="first-banner">
+                <img class="banner-img" src="./img/WhatsApp Image 2024-04-13 at 17.53.38 (3).jpeg"></img>
+            </div>
+            <div class="slide-banner">
+                <img class="banner-img src" src="./img/WhatsApp Image 2024-04-13 at 17.53.39 (1).jpeg"></img>
+            </div>
+            <div class="slide-banner">
+                <img class="banner-img" src="./img/WhatsApp Image 2024-04-13 at 17.53.39.jpeg"></img>
+            </div>
+
+            <div class="navigation-auto-banner">
+                <div class="auto-btn1-banner"></div>
+                <div class="auto-btn2-banner"></div>
+                <div class="auto-btn3-banner"></div>
+            </div>
+            <div class="manual-navigation-banner">
+                <label for="radio1" class="manual-btn-banner"></label>
+                <label for="radio2" class="manual-btn-banner"></label>
+                <label for="radio3" class="manual-btn-banner"></label>
             </div>
         </div>
         <div class="clothes-geners">
@@ -149,9 +191,9 @@
                 <div class="combo-item"></div>
                 <div class="combo-item"></div>
                 <div class="combo-item"></div>
-                <!-- <div class="combo-item"></div>
                 <div class="combo-item"></div>
-                <div class="combo-item"></div> -->
+                <div class="combo-item"></div>
+                <div class="combo-item"></div>
             </span>
         </div>
         <div class="services">
@@ -168,5 +210,5 @@
     </main>
     <footer class="footer"></footer>
 </body>
-    <script src="index.js"></script>
+<script src="index.js"></script>
 </html>

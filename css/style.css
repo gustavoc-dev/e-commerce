@@ -173,40 +173,58 @@ nav {
 }
 
 .arrives {
+  display: flex;
+  justify-content: flex-start;
   overflow-x: auto;
+  margin: 0 auto;
+  width: 95vw;
+}
+
+.arrives-itens {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
 }
 
 .arrives::-webkit-scrollbar {
   display: none;
 }
 
-.arrow-left, .arrow-right {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: auto;
-  margin-top: 52.6rem;
-  font-size: 40px;
-  line-height: 250px;
-  width: 40px;
-  height: 30rem;
-  color: #fff;
-  transition: all 600ms ease-in-out;
-  background: linear-gradient(to left, transparent 0%, black 200%);
-  opacity: 0.1;
+.arrives i {
+  height: 44px;
+  width: 44px;
+  color: #343F4F;
   cursor: pointer;
-  border: none;
+  font-size: 1.15rem;
+  position: absolute;
+  text-align: center;
+  line-height: 44px;
+  background: #fff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
 }
 
-.arrow-left:hover, .arrow-right:hover {
-  opacity: 1;
+.arrives i:active {
+  transform: translateY(-50%) scale(0.9);
 }
 
-.arrow-right {
-  right: 0;
-  left: auto;
-  text-align: right;
-  background: linear-gradient(to right, transparent 0%, black 200%);
+.arrives i:hover {
+  background: #f2f2f2;
+}
+
+.arrives i:first-child {
+  left: 10px;
+  bottom: -160px;
+}
+
+.arrives i:last-child {
+  right: 10px;
+  bottom: -160px;
 }
 
 .arrives-title {
@@ -220,11 +238,20 @@ nav {
   margin-bottom: 0;
 }
 
-.arrives-itens {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  width: 160vw;
+.arrives-itens .dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+
+.arrives-itens .dragging img {
+  pointer-events: none;
+}
+
+.arrives-itens img {
+  height: 340px;
+  object-fit: cover;
+  user-select: none;
+  margin-left: 14px;
 }
 
 .section-itens {
@@ -234,23 +261,97 @@ nav {
 
 .arrives-img {
   background-color: yellow;
-  height: 30rem;
-  width: 30rem;
+  height: 25rem;
+  width: 20rem;
   border-radius: 10px;
   flex-shrink: 0;
-  transition: all 600ms ease-in-out;
 }
 
 .banner {
   margin-top: 4rem;
   margin-bottom: 2rem;
+  display: flex;
+  overflow: hidden;
+}
+
+.banner input {
+  display: none;
+}
+
+.slide-banner {
+  position: relative;
+}
+
+.manual-navigation-banner {
+  position: absolute;
+  display: flex;
+  margin: 48rem 3rem;
+  right: 0;
+}
+
+.manual-btn-banner {
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.manual-btn-banner:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn-banner:hover {
+  background-color: white;
+}
+
+#radio1-banner:checked ~ .first-banner {
+  margin-left: 0;
+}
+
+#radio2-banner:checked ~ .first-banner {
+  margin-left: -100%;
+}
+
+#radio3-banner:checked ~ .first-banner {
+  margin-left: -200%;
+}
+
+.navigation-auto-banner {
+  position: absolute;
+  display: flex;
+  right: 0;
+  margin: 48rem 3rem;
+}
+
+.navigation-auto-banner div {
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.navigation-auto-banner div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1-banner:checked ~ .navigation-auto-banner .auto-btn1-banner {
+  background-color: white;
+}
+
+#radio2-banner:checked ~ .navigation-auto-banner .auto-btn2-banner {
+  background-color: white;
+}
+
+#radio3-banner:checked ~ .navigation-auto-banner .auto-btn3-banner {
+  background-color: white;
 }
 
 .banner-img {
   background-color: black;
   height: 50rem;
-  width: 100%;
-  margin: 0 auto;
+  width: 100vw;
 }
 
 .clothes-geners {
