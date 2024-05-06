@@ -6,6 +6,7 @@
     <title>E-Commerce</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="./index.js" defer></script>
 </head>
 <body>
     <header>
@@ -84,75 +85,83 @@
                 <section>
                     <div class="item current-item"></div>
                         <img class="arrives-img" src="./img/WhatsApp Image 2024-04-13 at 17.53.39.jpeg"></img>
-                        <span>
-                            <p>Lorem</p>
-                            <p><strong>R$00</strong></p>
+                        <span class="productSpan">
+                            <p class="productName">Camisa</p>
+                            <p class="productPrice"><strong>R$00</strong></p>
+                            <button id="addShopcartMenu"><img src="" alt="carrinho"></button>
                         </span>
-                        <button><img src="" alt="carrinho"></button>
+
                 </section>
                 <section>
                     <img class="arrives-img" src="./img/WhatsApp Image 2024-04-13 at 17.53.38 (3).jpeg"></img>
-                        <span>
-                            <p>Lorem</p>
-                            <p><strong>R$00</strong></p>
+                        <span class="productSpan">
+                            <p class="productName">Calça</p>
+                            <p class="productPrice"><strong>R$00</strong></p>
+                            <button id="addShopcartMenu"><img src="" alt="carrinho"></button>                        
                         </span>
-                        <button><img src="" alt="carrinho"></button>
                 </section>
                 <section>
                     <img class="arrives-img" src="./img/WhatsApp Image 2024-04-13 at 17.53.38 (3).jpeg"></img>
-                        <span>
-                            <p>Lorem</p>
-                            <p><strong>R$00</strong></p>
+                        <span class="productSpan">
+                            <p class="productName">Bermuda</p>
+                            <p class="productPrice"><strong>R$00</strong></p>
+                            <button id="addShopcartMenu"><img src="" alt="carrinho"></button>                        
                         </span>
-                        <button><img src="" alt="carrinho"></button>
                 </section>
                 <section>
                     <img class="arrives-img" src="./img/WhatsApp Image 2024-04-13 at 17.53.38 (3).jpeg"></img>
-                    <span>
-                        <p>Lorem</p>
-                        <p><strong>R$00</strong></p>
+                    <span class="productSpan">
+                        <p class="productName">Blusa</p>
+                        <p class="productPrice"><strong>R$00</strong></p>
+                        <button id="addShopcartMenu"><img src="" alt="carrinho"></button>
                     </span>
                 </section>
                 <section>
                     <img class="arrives-img" src="./img/WhatsApp Image 2024-04-13 at 17.53.38 (3).jpeg"></img>
-                    <span>
-                        <p>Lorem</p>
-                        <p><strong>R$00</strong></p>
+                    <span class="productSpan">
+                        <p class="productName">Mochila</p>
+                        <p class="productPrice"><strong>R$00</strong></p>
+                        <button id="addShopcartMenu"><img src="" alt="carrinho"></button>
                     </span>
                 </section>
                 <section>
                     <img class="arrives-img" src="./img/WhatsApp Image 2024-04-13 at 17.53.38 (3).jpeg"></img>
-                    <span>
-                        <p>Lorem</p>
-                        <p><strong>R$00</strong></p>
+                    <span class="productSpan">
+                        <p class="productName">Carteira</p>
+                        <p class="productPrice"><strong>R$00</strong></p>
+                        <button id="addShopcartMenu"><img src="" alt="carrinho"></button>
                     </span>
                 </section>
                 <section>
                     <img class="arrives-img" src="./img/WhatsApp Image 2024-04-13 at 17.53.38 (3).jpeg"></img>
-                    <span>
-                        <p>Lorem</p>
-                        <p><strong>R$00</strong></p>
+                    <span class="productSpan">
+                        <p class="productName">Tênis</p>
+                        <p class="productPrice"><strong>R$00</strong></p>
+                        <button id="addShopcartMenu"><img src="" alt="carrinho"></button>
                     </span>
                 </section>
                 <section>
                     <img class="arrives-img" src="./img/WhatsApp Image 2024-04-13 at 17.53.38 (3).jpeg"></img>
-                    <span>
-                        <p>Lorem</p>
-                        <p><strong>R$00</strong></p>
+                    <span class="productSpan">
+                        <p class="productName">Sapato</p>
+                        <p class="productPrice"><strong>R$00</strong></p>
+                        <button id="addShopcartMenu"><img src="" alt="carrinho"></button>
                     </span>
                 </section>
                 <section>
                     <img class="arrives-img" src="./img/WhatsApp Image 2024-04-13 at 17.53.38 (3).jpeg"></img>
-                    <span>
-                        <p>Lorem</p>
-                        <p><strong>R$00</strong></p>
+                    <span class="productSpan">
+                        <p class="productName">Gravata</p>
+                        <p class="productPrice"><strong>R$00</strong></p>
+                        <button id="addShopcartMenu"><img src="" alt="carrinho"></button>
                     </span>
                 </section>
                 <section>
                     <img class="arrives-img" src="./img/WhatsApp Image 2024-04-13 at 17.53.38 (3).jpeg"></img>
-                    <span>
-                        <p>Lorem</p>
-                        <p><strong>R$00</strong></p>
+                    <span class="productSpan">
+                        <p class="productName">Terno</p>
+                        <p class="productPrice"><strong>R$00</strong></p>
+                        <button id="addShopcartMenu"><img src="" alt="carrinho"></button>
                     </span>
                 </section>
             </div>
@@ -218,30 +227,37 @@
         <div class="footer-itens">
             <section class="footer-section">
                 <h3>NOSSA MISSÃO</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, sit?</p>
-                <h3>CONTATO</h3>
+                <p>A Insider nasceu para impulsionar a evolução da indústria. Aprendemos, inovamos e melhoramos constantemente, para criar um mundo onde todos são encorajados subir a barra e buscar excelência.</p>
+                <h3 class="contact">CONTATO</h3>
                 <p>Whatsapp</p>
             </section>
-            <section>
-                <h3>NOSSA MISSÃO</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, sit?</p>
-                <h3>CONTATO</h3>
-                <p>Whatsapp</p>
+            <section class="footer-section">
+                <h3>DÚVIDAS</h3>
+                <p>Política de Privacidade e Segurança de Dados</p>
+                <P>Termos e Condições de Uso da Insider</P>
+                <P>Mapa do site</P>
+                <P>Ajuda / FAQ</P>
+                <P>Solicitar troca/devolução</P>
+                <P>Política de troca/devolução</P>
+                <P>Política de reembolso</P>
+                <P>Política de Frete</P>
             </section>
-            <section>
-                <h3>NOSSA MISSÃO</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, sit?</p>
-                <h3>CONTATO</h3>
-                <p>Whatsapp</p>
+            <section class="footer-section">
+                <h3>SOBRE</h3>
+                <p>Sobre a Insider</p>
+                <p>Rebranding</p>
+                <p>Sustentabilidade</p>
+                <p>Blog</p>
+                <p>Compre para sua empresa</p>
+                <p>Reviews</p>
             </section>
-            <section>
-                <h3>NOSSA MISSÃO</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, sit?</p>
-                <h3>CONTATO</h3>
-                <p>Whatsapp</p>
+            <section class="footer-section">
+                <h3>CERTIFICADOS</h3>
+                <div class="certifications"></div>
+                <div class="certifications"></div>
+                <div class="certifications"></div>
             </section>
         </div>
     </footer>
 </body>
-<script src="./index.js"></script>
 </html>

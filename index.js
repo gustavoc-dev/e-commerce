@@ -1,5 +1,16 @@
+//Criar Menu Carrinho de Compras
 const shopCart = document.getElementById('shop-cart')
 const shopCartMenu = document.getElementById('shop-cart-menu')
+
+
+function hideMenuItens(){
+    if(shopCartMenu.className !== 'active'){
+        document.getElementById('shop-cart-menu').style.display = "none";
+    }else if(shopCartMenu.className == 'active'){
+        document.getElementById('shop-cart-menu').style.display = "block";
+    }
+}
+
 
 function createShopCartMenu(){
     shopCartMenu.classList.toggle('active')
@@ -8,20 +19,117 @@ function createShopCartMenu(){
 function shopcartMenu(){
     shopCart.classList.toggle('active')
     createShopCartMenu()
+    hideMenuItens()
 }
 
 shopCart.addEventListener('click',shopcartMenu)
 
+//Adicionar produtos carrinho de compras
+const addToShopcartMenu = document.querySelectorAll('#addShopcartMenu')
+const productSpan = document.querySelector('.productSpan')
+
+function abc(ev){
+    const productSection = document.createElement('section')
+    productSection.id = "productSection"
+    const productName = document.createElement('p')
+    const productPrice = document.createElement('span')
+    
+    productSection.classList.add('product-section')
+    productName.classList.add('product-name')
+    productPrice.classList.add('porduct-price')
+
+    const minusBtn = document.createElement('button')
+    const productQtn = document.createElement('span')
+    const plusBtn = document.createElement('button')
+    const removeBtn = document.createElement('button')
+
+    function removeItem(){
+       document.getElementById('shop-cart-menu').removeChild(productSection) 
+    }
+
+    productQtn.classList.add('product-qtn')
+    productQtn.textContent = '1'
+
+    function addQtn(){
+        let qtn = parseInt(productQtn.textContent)
+        let sum = qtn+1
+        productQtn.textContent = parseFloat(sum)
+    }
+
+    function subQtn(){
+        let qtn = parseInt(productQtn.textContent)
+        let sum = qtn-1
+        productQtn.textContent = parseFloat(sum)
+        if(sum <=0){
+            removeItem()
+        }
+     }
+
+    minusBtn.classList.add('minus-btn')
+    minusBtn.textContent = '-'
+    minusBtn.addEventListener('click',subQtn)
+
+
+    plusBtn.classList.add('plus-btn')
+    plusBtn.textContent = '+'
+    plusBtn.addEventListener('click',addQtn)
+
+    removeBtn.classList.add('remove-btn')
+    removeBtn.textContent = 'Remover'
+    removeBtn.addEventListener('click',removeItem)
+    
+    
+
+    const parentContainer = ev.target.closest('.productSpan');
+    if (!parentContainer) {
+        console.error("Erro: Elemento contêiner não encontrado.");
+        return;
+    }
+
+    const nameElement = parentContainer.querySelector('.productName');
+    const priceElement = parentContainer.querySelector('.productPrice');
+
+    const nameValue = nameElement ? nameElement.textContent : 'Nome do Produto Não Encontrado';
+    const priceValue = priceElement ? priceElement.textContent : 'Preço do Produto Não Encontrado';
+
+    productName.textContent = nameValue;
+    productPrice.textContent = priceValue;
+
+    shopCartMenu.appendChild(productSection)
+    productSection.append(productName,productPrice,plusBtn,productQtn,minusBtn,removeBtn)
+}
+
+addToShopcartMenu.forEach(function(addToShopcartMenu){
+    addToShopcartMenu.addEventListener('click',abc)
+})
+
+//Autorolagem automática de imagens
+let count = 1
+document.getElementById('radio1').checked = true
+
+setInterval( function(){
+    nextImage()
+},4000)
+
+function nextImage(){
+    count++
+    if(count>3){
+        count = 1
+    }
+    document.getElementById('radio'+count).checked = true
+}
+
+//Lançamentos Carrossel
 const carousel = document.querySelector(".arrives-itens"),
 firstImg = carousel.querySelectorAll("img")[0],
 arrowIcons = document.querySelectorAll(".arrives i");
 let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
 
-const showHideIcons = () => {
-    let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
-    arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
-    arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block";
-}
+// const showHideIcons = () => {
+//     let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
+//     arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
+//     arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block";
+// }
 arrowIcons.forEach(icon => {
     icon.addEventListener("click", () => {
         let firstImgWidth = firstImg.clientWidth + 14;
@@ -67,22 +175,7 @@ carousel.addEventListener("touchmove", dragging);
 document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("touchend", dragStop);
 
-
-let count = 1
-document.getElementById('radio1').checked = true
-
-setInterval( function(){
-    nextImage()
-},4000)
-
-function nextImage(){
-    count++
-    if(count>3){
-        count = 1
-    }
-    document.getElementById('radio'+count).checked = true
-}
-
+//Combos Carrossel
 const carouselCombo = document.querySelector(".combos-itens"),
 firstImgCombo = carouselCombo.querySelectorAll("img")[0],
 arrowIconsCombo = document.querySelectorAll(".combos i");
@@ -130,8 +223,6 @@ const dragStopCombo = () => {
     isDragging = false;
     autoSlideCombo();
 }
-
-
 
 carouselCombo.addEventListener("mousedown", dragStartCombo);
 carouselCombo.addEventListener("touchstart", dragStartCombo);
